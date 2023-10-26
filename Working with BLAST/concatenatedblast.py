@@ -6,12 +6,12 @@ from autoblast import runblast
 from readingblast import readresults
 from calculatingblast import determine
 
-barcodenamedatabaselocation = r"C:\Users\mitsa\Desktop\Dissertation\IDname.txt" #input("Input the raw path of your bacterial strain, name and barcode tsv.txt file.: ")
-querysequencelocation = r"C:\Users\mitsa\Desktop\Dissertation\ASSEMBLIESGENES\T3SS SELECT\XopX.fna" #input("Input the raw path of your query sequence.: ")
-genomeassemblylocation = r"C:\Users\mitsa\Desktop\Dissertation\ASSEMBLIESGENES\PhytoBacIdent" #input("Input the raw path of your folder containing your .fasta genome assemblies.: ")
-databasedesiredlocation = r"C:\Users\mitsa\Desktop\Databases" #input("Input your desired raw path of the folder in which your databases should be generated: ")
-blastresultdesiredlocation = r"C:\Users\mitsa\Desktop\QueryResults" #input("Input the desired raw of the folder in which the BLAST results will be printed out in: ")
-commence = input("Type True or False, to respectively abort or continue with the program: ")
+barcodenamedatabaselocation = #Input raw path to txt file containing two tab separated columns, the strain barcodes on the left and the strain names on the right.
+querysequencelocation = #Input raw path of query .fasta sequence youy want to run against your set of genome assemblies.
+genomeassemblylocation = #Input raw path of the folder containing your genome assemblies, ensure that they end with .fasta, otherwise ammendements need to be made in the makeblastdatbases program, ro change .endswith from .fasta to .fna.
+databasedesiredlocation = #Input raw  path of an empty folder in which you would want your databases to be collected in.
+blastresultdesiredlocation = #Input raw path of of an empty folder in which the result.txt files of BLAST will be collected in.
+commence = input("Type True or False, to respectively continue or abort with the program: ")
 
 if commence == "True":
  print("Commencing query sequence analysis")
@@ -35,5 +35,5 @@ if commence == "True":
  print("Processing finished, program will exit, a csv file will be available")
 
 else: 
- print("Goodbye")
+ print("Program will now shut down")
  sys.exit()
